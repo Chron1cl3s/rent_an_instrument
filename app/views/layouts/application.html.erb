@@ -5,8 +5,18 @@
     <title>RentAnInstrument</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
+  </head>
+
+  <body>
+    <!-- From device installation -->
     <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-  <%= link_to "#", class: "navbar-brand" do %>
+    <%= link_to "#", class: "navbar-brand" do %>
     <i class="fas fa-guitar"></i>
     <% end %>
 
@@ -28,14 +38,6 @@
   </div>
 </div>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
-  </head>
-
-  <body>
-    <!-- From device installation -->
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
     <%= yield %>
