@@ -1,14 +1,14 @@
 .button-green {
-  color: white;
+  color: $bisque;
   padding: 8px 24px;
   border-radius: 50px;
-  background: #668683;
+  background: $maroon;
   transition: background 0.3s ease;
 }
 
 .button-green:hover {
-  background: #bad3d0;
-  color: white;
+  background: #a52e5a;
+  color: $bisque;
   text-decoration: none;
 }
 

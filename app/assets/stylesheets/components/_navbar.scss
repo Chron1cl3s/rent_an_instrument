@@ -1,6 +1,6 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background: #BAD3D0;
+  background: $bisque;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -16,7 +16,7 @@
 }
 
 .navbar a {
-  color: white;
+  color: $tyrian;
 }
 
 .logo {
