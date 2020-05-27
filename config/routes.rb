@@ -9,4 +9,3 @@ Rails.application.routes.draw do
   resources :instruments, only: [:index, :show, :new, :create]
   resources :bookings, only: [:index, :show, :destroy, :update]
 end
-
