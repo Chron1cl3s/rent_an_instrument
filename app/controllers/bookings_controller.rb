@@ -1,4 +1,4 @@
-# class BookingsController < ApplicationController
+class BookingsController < ApplicationController
 
 # def create
 #     @instrument = Instrument.find(params[:instrument_id])
@@ -45,4 +45,4 @@
 #     @booking = Booking.find(params[:id])
 #   end
 
-# end
+end
