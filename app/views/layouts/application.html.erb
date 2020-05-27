@@ -18,7 +18,7 @@
     <!-- From device installation -->
     <div class="navbar-transparent">
     <div class="navbar navbar-expand-sm navbar-light navbar-lewagon fixed-top">
-    <%= link_to "#", class: "navbar-brand" do %>
+    <%= link_to "root", class: "navbar-brand" do %>
     <i class="fas fa-guitar"></i>
     <% end %>
 
@@ -31,10 +31,10 @@
     <ul class="navbar-nav mr-auto">
 
         <li class="nav-item">
-          <%= link_to "Login", class: "nav-link" %>
+          <%= link_to "Login", user_session_path, class: "nav-link" %>
         </li>
         <li class="nav-item">
-          <%= link_to "Sign Up", class: "nav-link" %>
+          <%= link_to "Sign Up", new_user_registration_path, class: "nav-link" %>
         </li>
     </ul>
   </div>
