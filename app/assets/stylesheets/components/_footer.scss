@@ -1,5 +1,5 @@
 .footer {
-  background: #bad3d0;
+  background: $bisque;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -12,7 +12,7 @@
   align-items: center;
 }
 .footer-links a {
-  color: black;
+  color: $tyrian;
   opacity: 0.16;
   text-decoration: none;
   font-size: 24px;
@@ -22,5 +22,5 @@
   opacity: 1;
 }
 .footer .fa-heart {
-  color: #D23333;
+  color: $maroon;
 }
