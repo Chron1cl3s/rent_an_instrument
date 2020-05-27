@@ -1,0 +1,63 @@
+.element-container{
+  background-color: white;
+  border-radius: 8px;
+  padding: 32px;
+  margin-bottom: 30px;
+  border: 1px solid rgb(230,230,230);
+}
+.slider {
+  width: 100%;
+  height: 300px;
+  position: relative;
+  margin: auto;
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+
+.slider::-webkit-scrollbar {
+  display: none;
+}
+
+.slider .slide {
+  display: flex;
+  position: absolute;
+  left: 0;
+  transition: 0.3s left ease-in-out;
+}
+
+.slider .item {
+  margin-right: 10px;
+  display: flex;
+}
+
+.slider .item:last-child {
+  margin-right: 0;
+}
+
+.ctrl {
+  text-align: center;
+  margin-top: 5px;
+}
+
+.ctrl-btn {
+  padding: 20px 20px;
+  min-width: 50px;
+  background: #BAD3D0;
+  border: none;
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+  border: 1px solid rgb(230,230,230);
+
+  position: absolute;
+  top: 50%;
+  margin-top: -27.5px;
+}
+
+.ctrl-btn.pro-prev {
+  left: 0;
+}
+
+.ctrl-btn.pro-next {
+  right: 0;
+}
