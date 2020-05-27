@@ -1,5 +1,7 @@
 <h1> <%= @instrument.name %></h1>
 
+<%= image_tag @instrument.photo %>
+
 <h5>Category:</h5>
 <p> <%= @instrument.category %></p>
 
@@ -11,3 +13,4 @@
 
 
 <h2> <%= link_to "Book now" %></h2>
+<h2> <%= link_to "Go Back", instruments_path %></h2>
