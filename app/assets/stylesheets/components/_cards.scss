@@ -1,3 +1,11 @@
+.element-container{
+  background-color: white;
+  border-radius: 8px;
+  padding: 32px;
+  margin: 32px;
+  border: 1px solid rgb(230,230,230);
+}
+
 .card img {
   width: 150px;
 }
@@ -11,7 +19,7 @@
   border-radius: 3px;
   box-shadow: 0 0 5px rgb(230,230,230);
   text-align: center;
-  padding: 20px;
+  padding: 16px;
   border: 1px solid rgb(230,230,230);
 }
 
