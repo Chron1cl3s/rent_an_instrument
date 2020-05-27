@@ -1,7 +1,7 @@
-
 <div class="container">
   <h2 class="text-center">Instruments</h2>
     <div class= "d-flex">
+      <%= link_to "New Instrument", new_instrument_path, class: "button-green" %>
       <% @instruments.each do |instrument| %>
         <div class="card_instrument_index">
           <h6><%= link_to instrument.name, instrument_path(instrument)%></h6>
@@ -10,3 +10,4 @@
     </div>
   </div>
 </div>
+
