@@ -1,3 +1,4 @@
+<%= render "shared/navbar" %>
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= image_path 'banner.jpg' %>');">>
     <div class="container">
     <h1>Rent an Instrument with Soul</h1>
@@ -5,32 +6,6 @@
     <%= link_to "All instruments", instruments_path, class: "button-green" %>
   </div>
 </div>
-
-<div class="container">
-  <div class="element-container">
-    <h2 class="text-center">How it works</h2>
-    <div class="cards">
-
-      <div class="card">
-        <%= image_tag'apply.svg', class: 'img' %>
-        <h4>Book it</h4>
-        <p>Find the nearest clarinet next to you.</p>
-      </div>
-
-      <div class="card">
-        <%= image_tag'learn.svg', class: 'img' %>
-        <h4>Play it like you mean it</h4>
-        <p>Learn Ruby on Rails, Javascript, SQL & much more!</p>
-      </div>
-
-      <div class="card">
-        <%= image_tag'product.svg', class: 'img' %>
-        <h4>Return it</h4>
-        <p>No strings attached.</p>
-        <p>Unless it was a guitar</p>
-      </div>
-    </div>
-  </div>
 
         <!-- SLIDER -->
   <div class="element-container">
@@ -104,8 +79,8 @@
   <button class="ctrl-btn pro-prev">Prev</button>
   <button class="ctrl-btn pro-next">Next</button>
 </div>
-<a class="button-white" href="#">view all</a>
+<%= link_to "All instruments", instruments_path, class: "button-green" %>
 </div>
 </div>
-
+<%= render "shared/footer" %>
 
