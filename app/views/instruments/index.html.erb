@@ -1,6 +1,12 @@
 <h1>Instruments</h1>
-<ul>
-  <% @instruments.each do |instrument| %>
-  <li> <%= link_to instrument.name, instrument_path(instrument)%> <%= image_tag instrument.photo %></li>
-  <% end %>
-</ul>
+<div class="container">
+  <h2 class="text-center">Instruments</h2>
+    <div class= "d-flex">
+      <% @instruments.each do |instrument| %>
+        <div class="card_instrument_index">
+          <h6><%= link_to instrument.name, instrument_path(instrument)%></h6>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
