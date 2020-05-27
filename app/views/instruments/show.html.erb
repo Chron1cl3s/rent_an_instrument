@@ -1,0 +1,13 @@
+<h1>@instrument.name</h1>
+
+<h5>Category</h5>
+<p> <%= @instrument.category %></p>
+
+<h5>Details</h5>
+<p> <%= @instrument.description %></p>
+
+<h5>Price per day</h5>
+<p> <%= @instrument.price_per_day %></p>
+
+<h4><%= link_to "Book this instrument!" %> </h4>
+<h4> <%= link_to "Back to all instruments", instruments_path%></h4>

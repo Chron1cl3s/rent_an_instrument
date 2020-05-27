@@ -1,6 +1,6 @@
 <h1>Instruments</h1>
 <ul>
   <% @instruments.each do |instrument| %>
-  <li> <%= instrument.name%> <%= image_tag instrument.photo %></li>
+  <li> <%= link_to instrument.name, instrument_path(instrument)%> <%= image_tag instrument.photo %></li>
   <% end %>
 </ul>
