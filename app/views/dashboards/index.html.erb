@@ -1,0 +1,36 @@
+<%= render "shared/navbar" %>
+
+<h2>My bookings</h2>
+
+<% @bookings.each do |booking| %>
+  <p><%= booking.id %> <%= booking.instrument.name %> </p>
+  <ul>
+    <li> Start date: <%= booking.start_date %></li>
+    <li> End date: <%= booking.end_date %></li>
+    <li> Total price: <%= booking.total_price %></li>
+  </ul>
+<% end %>
+
+<h2>Pending incoming bookings</h2>
+<% @pending_incoming_bookings.each do |pending_incoming_booking| %>
+  <p><%= pending_incoming_booking.id %> <%= pending_incoming_booking.instrument.name %> </p>
+  <ul>
+    <li> Start date: <%= pending_incoming_booking.start_date %></li>
+    <li> End date: <%= pending_incoming_booking.end_date %></li>
+    <li> Total price: <%= pending_incoming_booking.total_price %></li>
+  </ul>
+<% end %>
+
+<h2>My incoming bookings</h2>
+<% @incoming_bookings.each do |incoming_booking| %>
+  <p><%= incoming_booking.id %> <%= incoming_booking.instrument.name %> </p>
+  <ul>
+     <li> Start date: <%= incoming_booking.start_date %></li>
+    <li> End date: <%= incoming_booking.end_date %></li>
+    <li> Total income: <%= incoming_booking.total_price %></li>
+  </ul>
+<% end %>
+
+<p> <%= link_to "Home", root_path %> <%= link_to "Browse all instruments", instruments_path %></p>
+
+<%= render "shared/footer" %>
