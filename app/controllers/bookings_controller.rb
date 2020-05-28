@@ -12,6 +12,7 @@ def create
     @booking.instrument = @instrument
     @booking.user = current_user
     @booking.status = "Pending"
+    authorize @booking
     if @booking.save
       flash[:notice] = "Booking Confirmed"
       redirect_to instruments_path

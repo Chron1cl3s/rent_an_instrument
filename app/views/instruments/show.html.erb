@@ -15,10 +15,12 @@
 
 <h2> <%= link_to "Go Back", instruments_path %></h2>
 
-<%= simple_form_for ([@instrument, @booking]) do |f| %>
-<%= f.input :start_date , as: :date %>
-<%= f.input :end_date, as: :date %>
-<%= f.submit "Make booking", class: "btn btn-primary" %>
+<% if @instrument.user != current_user %>
+  <%= simple_form_for ([@instrument, @booking]) do |f| %>
+  <%= f.input :start_date , as: :date %>
+  <%= f.input :end_date, as: :date %>
+  <%= f.submit "Make booking", class: "btn btn-primary" %>
+  <% end %>
 <% end %>
 
 <%= render "shared/footer" %>
