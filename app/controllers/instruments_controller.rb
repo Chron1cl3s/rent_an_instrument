@@ -1,6 +1,7 @@
 class InstrumentsController < ApplicationController
   def index
     @instruments = Instrument.all
+    @notice = params[:notice]
   end
 
   def show
