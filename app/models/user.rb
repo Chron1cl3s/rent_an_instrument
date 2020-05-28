@@ -6,4 +6,7 @@ class User < ApplicationRecord
 
   has_many :instruments, dependent: :delete_all
   has_many :bookings, dependent: :delete_all
+
+  geocoded_by :address
+  after_validation :geocode, if: :will_save_change_to_address?
 end
