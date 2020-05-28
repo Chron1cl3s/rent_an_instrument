@@ -1,7 +1,8 @@
-<%= render "shared/navbar" %>
 <h1> <%= @instrument.name %></h1>
 
-<%= cl_image_tag @instrument.photo.key %>
+  <% if @instrument.photo.attached? %>
+    <%= cl_image_tag @instrument.photo.key %>
+  <% end %>
 
 <h5>Category:</h5>
 <p> <%= @instrument.category %></p>

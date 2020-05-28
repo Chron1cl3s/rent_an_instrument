@@ -1,10 +1,11 @@
-<%= render "shared/navbar" %>
 <div class="container">
   <h2 class="text-center">Instruments</h2>
     <div class= "cards-index ">
       <% @instruments.each do |instrument| %>
         <div class="card-instrument">
-        <%= cl_image_tag instrument.photo.key %>
+          <% if instrument.photo.attached? %>
+            <%= cl_image_tag instrument.photo.key %>
+          <% end %>
         <div class="card-instrument-infos">
           <div>
             <h2><%= link_to instrument.name, instrument_path(instrument) %></h2>
