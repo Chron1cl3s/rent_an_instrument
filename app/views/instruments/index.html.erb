@@ -1,6 +1,7 @@
 <%= render "shared/navbar" %>
 <div class="container">
-  <h2 class="text-center">Instruments</h2>
+<div class="row justify-content-center">
+  <h2>Instruments</h2>
     <div class= "cards-index ">
       <% @instruments.each do |instrument| %>
         <div class="card-instrument">
@@ -10,12 +11,15 @@
             <h2><%= link_to instrument.name, instrument_path(instrument) %></h2>
             <p><%= instrument.category %></p>
           </div>
-          <h2 class="card-instrument-pricing"><%= instrument.price_per_day %>€</h2><p> /day</p>
+          <div class="card-instrument-pricing">
+            <h2><%= instrument.price_per_day %>€</h2>
+          </div>
         </div>
       </div>
       <% end %>
     </div>
     <%= link_to "Add new Instrument", new_instrument_path, class: "button-green" %>
+  </div>
   </div>
 </div>
 <%= render "shared/footer" %>
