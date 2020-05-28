@@ -1,24 +1,26 @@
 <%= render "shared/navbar" %>
-<h1> <%= @instrument.name %></h1>
+<div class="container">
+  <div class="main-container">
+    <div class="instrument-show">
+      <%= cl_image_tag @instrument.photo.key %>
+      <h1> <%= @instrument.name %></h1>
+      <h5> <%= @instrument.category %></h5>
+      <h2>Some details:</h2>
+      <p> <%= @instrument.description%> </p>
+      <h2>for only <strong> <%= @instrument.price_per_day %> €</strong>/day!</h2>
+    </div> 
+    <img id="map" src='https://raw.githubusercontent.com/lewagon/layouts-demo/gh-pages/images/mapbox.png'>
+  </div>
+<div class="calender">
+  <%= simple_form_for ([@instrument, @booking]) do |f| %>
+    <%= f.input :start_date , as: :date %>
+    <%= f.input :end_date, as: :date %>
+    <%= f.submit "Make booking", class: "button-green" %>
+    <%= link_to "Go Back", instruments_path, class: "button-white" %>
+    <% end %>
+    </div>
+</div>
 
-<%= cl_image_tag @instrument.photo.key %>
-
-<h5>Category:</h5>
-<p> <%= @instrument.category %></p>
-
-<h5>Details:</h5>
-<p> <%= @instrument.description%> </p>
-
-<h5>Price per day:</h5>
-<p> <%= @instrument.price_per_day %></p>
-
-<h2> <%= link_to "Go Back", instruments_path %></h2>
-
-<%= simple_form_for ([@instrument, @booking]) do |f| %>
-<%= f.input :start_date , as: :date %>
-<%= f.input :end_date, as: :date %>
-<%= f.submit "Make booking", class: "btn btn-primary" %>
-<% end %>
 
 <%= render "shared/footer" %>
 
