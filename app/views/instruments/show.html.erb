@@ -1,3 +1,4 @@
+<%= render "shared/navbar" %>
 <h1> <%= @instrument.name %></h1>
 
 <%= cl_image_tag @instrument.photo.key %>
@@ -11,6 +12,13 @@
 <h5>Price per day:</h5>
 <p> <%= @instrument.price_per_day %></p>
 
-
-<h2> <%= link_to "Book now" %></h2>
 <h2> <%= link_to "Go Back", instruments_path %></h2>
+
+<%= simple_form_for ([@instrument, @booking]) do |f| %>
+<%= f.input :start_date , as: :date %>
+<%= f.input :end_date, as: :date %>
+<%= f.submit "Make booking", class: "btn btn-primary" %>
+<% end %>
+
+<%= render "shared/footer" %>
+

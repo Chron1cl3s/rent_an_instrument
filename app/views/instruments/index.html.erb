@@ -1,13 +1,22 @@
+<%= render "shared/navbar" %>
 <div class="container">
   <h2 class="text-center">Instruments</h2>
-  <%= link_to "New Instrument", new_instrument_path, class: "button-green" %>
-    <div class= "d-flex">
+    <div class= "cards-index ">
       <% @instruments.each do |instrument| %>
-        <div class="card_instrument_index">
-          <h6><%= link_to instrument.name, instrument_path(instrument)%></h6>
+        <div class="card-instrument">
+        <%= cl_image_tag instrument.photo.key %>
+        <div class="card-instrument-infos">
+          <div>
+            <h2><%= link_to instrument.name, instrument_path(instrument) %></h2>
+            <p><%= instrument.category %></p>
+          </div>
+          <h2 class="card-instrument-pricing"><%= instrument.price_per_day %>€</h2><p> /day</p>
         </div>
+      </div>
       <% end %>
     </div>
+    <%= link_to "Add new Instrument", new_instrument_path, class: "button-green" %>
   </div>
 </div>
+<%= render "shared/footer" %>
 

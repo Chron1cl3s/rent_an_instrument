@@ -1,3 +1,4 @@
+<%= render "shared/navbar" %>
 <div class="container">
   <%= simple_form_for(@instrument) do |f| %>
   <%= f.error_notification %>
@@ -8,10 +9,9 @@
     <%= f.input :category %>
     <%= f.input :price_per_day %>
     <%= f.input :photo, as: :file %>
-  </div>
-  <div class="form-actions">
     <%= f.button :submit, class: 'button-green' %>
-  </div>
 <% end %>
  <%= link_to "Back", instruments_path, class: "button-white" %>
 </div>
+
+<%= render "shared/footer-fixed" %>
