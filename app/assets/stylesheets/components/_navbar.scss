@@ -1,19 +1,22 @@
 .navbar-lewagon {
   justify-content: space-between;
   transition: 0.5s background-color ease;
-  background: $bisque;
+  background: $maroon;
 }
 
-.navbar-lewagon-white {
-  background-color: #BAD3D0;
-}
+
 
 .navbar-lewagon .navbar-collapse {
   flex-grow: 0;
 }
 
+.navbar-light .navbar-brand {
+  color: $bisque;
+}
+
 .navbar-lewagon .navbar-brand img {
   width: 40px;
+  color: $bisque;
 }
 
 .nav-item {
@@ -21,7 +24,7 @@
 }
 
 .navbar a {
-  color: $tyrian;
+  color: $bisque;
 }
 
 .logo {

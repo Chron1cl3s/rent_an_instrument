@@ -3,7 +3,7 @@ class InstrumentsController < ApplicationController
     @instruments = Instrument.all
     @users = User.geocoded # returns user with coordinates
 
-    @markers = @users.map do |flat|
+    @markers = @users.map do |user|
       {
         lat: user.latitude,
         lng: user.longitude

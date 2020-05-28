@@ -1,10 +1,11 @@
 .footer {
-  background: $bisque;
+  background: $maroon;
   align-items: center;
   justify-content: space-between;
   height: 60px;
   padding: 0px 50px;
   color: rgba(0,0,0,0.3);
+  margin-top: 100px;
 }
 
 .footer-links {
@@ -13,7 +14,7 @@
   text-align: center;
 }
 .footer-links a {
-  color: $tyrian;
+  color: $bisque;
   opacity: 0.16;
   text-decoration: none;
   font-size: 24px;

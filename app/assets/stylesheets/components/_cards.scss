@@ -29,14 +29,46 @@
   margin-bottom: 30px;
 }
 
-.card_instrument_index {
-  width: 280px;
-  background-color: white;
-  border-radius: 3px;
-  box-shadow: 0 0 5px rgb(230,230,230);
-  text-align: center;
+.card-instrument {
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  width: 320px;
+}
+
+.card-instrument > img {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.card-instrument h3 {
+  font-size: 16px;
+  margin: 0;
+}
+.card-instrument h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+.card-instrument a {
+  color: black;
+}
+
+.card-instrument p {
+  font-size: 12px;
+  opacity: .7;
+  margin: 0;
+}
+
+.card-instrument .card-instrument-infos {
   padding: 16px;
-  border: 1px solid rgb(230,230,230);
-  margin: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
+}
+.card-instrument .card-instrument-infos .card-instrument-pricing {
+  align-items: flex-end;
 }
 
