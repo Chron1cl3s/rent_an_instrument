@@ -9,6 +9,8 @@ class InstrumentsController < ApplicationController
         lng: user.longitude
       }
     end
+    @notice = params[:notice]
+
   end
 
   def show
