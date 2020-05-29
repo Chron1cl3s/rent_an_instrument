@@ -20,32 +20,36 @@ User.destroy_all
 email1 = "host1@test.de"
 password1 = "host123456"
 password_confirmation1 = "host123456"
+address1 = "Stromstraße 2, 10555 Berlin"
 
-user1 = User.new(email: email1, password: password1, password_confirmation: password_confirmation1)
+user1 = User.new(email: email1, password: password1, address: address1, password_confirmation: password_confirmation1)
 user1.save
 
 
 email2 = "host2@test.de"
 password2 = "host123456"
 password_confirmation2 = "host123456"
+address2 = "Warschauer Straße 55, 10243 Berlin"
 
-user2 = User.create(email: email2, password: password2, password_confirmation: password_confirmation2)
+user2 = User.create(email: email2, password: password2, address: address2,password_confirmation: password_confirmation2)
 user2.save
 
 
 email3 = "host3@test.de"
 password3 = "host123456"
 password_confirmation3 = "host123456"
+address3 = "Müllerstraße 30, 13353 Berlin"
 
-user3 = User.create(email: email3, password: password3, password_confirmation: password_confirmation3)
+user3 = User.create(email: email3, password: password3, address: address3, password_confirmation: password_confirmation3)
 user3.save
 
 
 email4 = "host4@test.de"
 password4 = "host123456"
 password_confirmation4 = "host123456"
+address4 = "Manteuffelstraße 14, 10997 Berlin"
 
-user4 = User.create(email: email4, password: password4, password_confirmation: password_confirmation4)
+user4 = User.create(email: email4, password: password4, address: address4, password_confirmation: password_confirmation4)
 user4.save
 
 puts "Users created"
