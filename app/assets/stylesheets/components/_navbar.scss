@@ -1,9 +1,13 @@
 .navbar-lewagon {
   justify-content: space-between;
   background: $maroon;
+  font-family: 'Pacifico', cursive;
+  color: white;
 }
 
-
+// #rentstrument{
+//   font-family: 'Pacifico', cursive;
+// }
 
 .navbar-lewagon .navbar-collapse {
   flex-grow: 0;
@@ -11,19 +15,22 @@
 
 .navbar-light .navbar-brand {
   color: $bisque;
+  font-family: 'Pacifico', cursive;
 }
 
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
-  color: $bisque;
+.navbar-lewagon .navbar-brand h1 {
+  color: white;
+  font-family: 'Pacifico', cursive;
+  font-size: 16px;
 }
 
 .nav-item {
   padding-right: 30px;
+  color: white;
 }
 
 .navbar a {
-  color: $bisque;
+  color: white;
 }
 
 .logo {
