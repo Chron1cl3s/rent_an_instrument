@@ -1,85 +1,72 @@
+
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= image_path 'banner.jpg' %>');">>
     <div class="container">
     <h1>Rent an Instrument with Soul</h1>
     <p>Unique instruments in your city</p>
     <%= link_to "Browse all instruments", instruments_path, class: "button-green" %>
   </div>
-</div>
 
-        <!-- SLIDER -->
-  <div class="element-container">
-  <h2 class="text-center">Most popular near you</h2>
-<div class="slider" id="slider">
-  <div class="slide" id="slide">
-    <div class="item">
-      <div class="card">
-        <img src="https://source.unsplash.com/collection/415470/1600x900?sig=123">
-        <h4>Apply</h4>
-        <p>First apply to one of our campuses around the world.</p>
+          <!-- SLIDER -->
+    <div class="element-container">
+    <h2 class="text-center">Most popular near you</h2>
+  <div class="slider" id="slider">
+    <div class="slide" id="slide">
+      <div class="item">
+        <div class="card">
+          <%= image_tag 'violin.jpg' %>
+          <h4>Guarnerie Violin</h4>
+          <p>most beautiful, unique sound!!</p>
+        </div>
+      </div>
+      <div class="item">
+        <div class="card">
+          <%= image_tag 'piano.jpg' %>
+          <h4>Blüther piano Leipzig</h4>
+          <p>The warm sound you are searching for</p>
+        </div>
+      </div>
+      <div class="item">
+        <div class="card">
+          <%= image_tag 'drums.jpg' %>
+          <h4>Pearl drumset 405</h4>
+          <p>This drums will never let you down</p>
+        </div>
+      </div>
+      <div class="item">
+        <div class="card">
+          <%= image_tag 'sax.jpg' %>
+          <h4>Yamaha bc-23a</h4>
+          <p>The unforgetable sound of the 80's!!</p>
+        </div>
+      </div>
+      <div class="item">
+        <div class="card">
+          <%= image_tag 'violin2.jpg' %>
+          <h4>Violin for beginners</h4>
+          <p>Check out this new violin</p>
+        </div>
+      </div>
+      <div class="item">
+        <div class="card">
+          <%= image_tag 'guitar.jpg' %>
+          <h4>Guitar spanish/latin</h4>
+          <p>Play latin music like Santana</p>
+        </div>
+      </div>
+      <div class="item">
+        <div class="card">
+          <%= image_tag 'piano2.jpg' %>
+          <h4>Steinway D-Flügel</h4>
+          <p>The new steinway for your home</p>
+        </div>
       </div>
     </div>
-     <div class="item">
-      <div class="card">
-        <img src="https://source.unsplash.com/collection/415470/1600x900?sig=1">
-        <h4>Learn to code</h4>
-        <p>Learn Ruby on Rails, Javascript, SQL & much more!</p>
-      </div>
-    </div>
-     <div class="item">
-      <div class="card">
-        <img src="https://source.unsplash.com/collection/415470/1600x900?sig=200">
-        <h4>Build products</h4>
-        <p>Finally you will be able to bring your ideas to life.</p>
-      </div>
-    </div>
-    <div class="item">
-      <div class="card">
-        <img src="https://source.unsplash.com/collection/415470/1600x900?sig=12">
-        <h4>Apply</h4>
-        <p>First apply to one of our campuses around the world.</p>
-      </div>
-    </div>
-     <div class="item">
-      <div class="card">
-        <img src="https://source.unsplash.com/collection/415470/1600x900?sig=220">
-        <h4>Learn to code</h4>
-        <p>Learn Ruby on Rails, Javascript, SQL & much more!</p>
-      </div>
-    </div>
-    <div class="item">
-      <div class="card">
-        <img src="https://source.unsplash.com/collection/415470/1600x900?sig=100">
-        <h4>Build products</h4>
-        <p>Finally you will be able to bring your ideas to life.</p>
-      </div>
-    </div>
-    <div class="item">
-      <div class="card">
-        <img src="https://source.unsplash.com/collection/415470/1600x900?sig=90">
-        <h4>Apply</h4>
-        <p>First apply to one of our campuses around the world.</p>
-      </div>
-    </div>
-     <div class="item">
-      <div class="card">
-        <img src="https://source.unsplash.com/collection/415470/1600x900?sig=20">
-        <h4>Learn to code</h4>
-        <p>Learn Ruby on Rails, Javascript, SQL & much more!</p>
-      </div>
-    </div>
-    <div class="item">
-      <div class="card">
-        <img src="https://source.unsplash.com/collection/415470/1600x900?sig=10">
-        <h4>Build products</h4>
-        <p>Finally you will be able to bring your ideas to life.</p>
-      </div>
-    </div>
+    <button class="ctrl-btn pro-prev"><</button>
+    <button class="ctrl-btn pro-next">></button>
   </div>
-  <button class="ctrl-btn pro-prev"><</button>
-  <button class="ctrl-btn pro-next">></button>
-</div>
-<%= link_to "All instruments", instruments_path, class: "button-green" %>
-</div>
+  <%= link_to "All instruments", instruments_path, class: "button-green align-center" %>
+  </div>
+  </div>
 </div>
 <%= render "shared/footer" %>
 
