@@ -13,6 +13,7 @@ class BookingsController < ApplicationController
       @booking.user = current_user
       @booking.status = "pending"
       @booking.total_price = (@booking.end_date - @booking.start_date).to_i * @booking.instrument.price_per_day
+      authorize @booking
       if @booking.save
          flash[:notice] = "Booking Confirmed"
         redirect_to user_dashboards_path(current_user)
