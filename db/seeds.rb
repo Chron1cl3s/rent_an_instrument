@@ -172,7 +172,7 @@ start_date1 = Date.civil(2020,7,12)
 end_date1 = Date.civil(2020,7,20)
 difference1 = (end_date1 - start_date1).to_i
 total_price1 = difference1 * instrument3.price_per_day
-status1 = "accepted"
+status1 = "accept"
 
 booking1 = Booking.new(instrument_id: instrument_id1, user_id: user_id1,
   start_date: start_date1, end_date: end_date1, total_price: total_price1, status: status1)
@@ -185,7 +185,7 @@ start_date2 = Date.civil(2020,6,1)
 end_date2 = Date.civil(2020,6,5)
 difference2 = (end_date1 - start_date1).to_i
 total_price2 = difference1 * instrument3.price_per_day
-status2 = "declined"
+status2 = "pending"
 
 booking2 = Booking.new(instrument_id: instrument_id2, user_id: user_id2,
   start_date: start_date2, end_date: end_date2, total_price: total_price2, status: status2)
@@ -198,7 +198,7 @@ start_date3 = Date.civil(2020,7,1)
 end_date3 = Date.civil(2020,7,4)
 difference3 = (end_date1 - start_date1).to_i
 total_price3 = difference1 * instrument3.price_per_day
-status3 = "accepted"
+status3 = "accept"
 
 booking3 = Booking.new(instrument_id: instrument_id3, user_id: user_id3,
   start_date: start_date3, end_date: end_date3, total_price: total_price3, status: status3)
@@ -211,7 +211,7 @@ start_date4 = Date.civil(2020,8,1)
 end_date4 = Date.civil(2020,8,20)
 difference4 = (end_date1 - start_date1).to_i
 total_price4 = difference1 * instrument3.price_per_day
-status4 = "declined"
+status4 = "pending"
 
 booking4 = Booking.new(instrument_id: instrument_id4, user_id: user_id4,
   start_date: start_date4, end_date: end_date4, total_price: total_price4, status: status4)
@@ -224,7 +224,7 @@ start_date5 = Date.civil(2020,7,4)
 end_date5 = Date.civil(2020,7,7)
 difference5 = (end_date1 - start_date1).to_i
 total_price5 = difference1 * instrument3.price_per_day
-status5 = "accepted"
+status5 = "accept"
 
 booking5 = Booking.new(instrument_id: instrument_id5, user_id: user_id5,
   start_date: start_date5, end_date: end_date5, total_price: total_price5, status: status5)

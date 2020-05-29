@@ -38,8 +38,13 @@ class BookingsController < ApplicationController
 
   def update
     set_booking
-    @booking = Booking.update(params)
-    @booking.save
+    authorize @booking
+    if @booking.update(booking_params)
+      redirect_to user_dashboards_path(current_user)
+    # else
+    # @booking = Booking.update(params)
+    # @booking.save
+    end
   end
 
   private
