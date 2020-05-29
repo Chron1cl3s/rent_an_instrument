@@ -1,43 +1,54 @@
 class BookingsController < ApplicationController
 
-def new
-  @instrument = Instrument.find(params[:instrument_id])
-  @booking = Booking.new
-end
-
-def create
-
-    @booking = Booking.new(booking_params)
+  def new
     @instrument = Instrument.find(params[:instrument_id])
-    @booking.instrument = @instrument
-    @booking.user = current_user
-    @booking.status = "Pending"
-    authorize @booking
-    if @booking.save
-      flash[:notice] = "Booking Confirmed"
-      redirect_to instruments_path
-    else
-      redirect_to instruments_path
-    end
-end
+    @booking = Booking.new
+  end
 
-def index
-  @instruments = Instrument.where(user_id: current_user.id)
-end
+  def create
 
-def show
-  set_booking
-  @instrument = @booking.instrument
-end
+      @booking = Booking.new(booking_params)
+      @instrument = Instrument.find(params[:instrument_id])
+      @booking.instrument = @instrument
+      @booking.user = current_user
+      @booking.status = "pending"
+      @booking.total_price = (@booking.end_date - @booking.start_date).to_i * @booking.instrument.price_per_day
+      authorize @booking
+      if @booking.save
+         flash[:notice] = "Booking Confirmed"
+        redirect_to user_dashboards_path(current_user)
+      else
+        redirect_to instruments_path
+      end
+  end
 
-private
+  def index
+    @instruments = Instrument.where(user_id: current_user.id)
+  end
 
-def booking_params
-  params.require(:booking).permit(:status, :start_date, :end_date)
-end
+  def show
+    set_booking
+    @instrument = @booking.instrument
+  end
 
-def set_booking
-  @booking = Booking.find(params[:id])
-end
+  def edit
+    set_booking
+    @booking = Booking.find(params[:id])
+  end
 
+  def update
+    set_booking
+    @booking = Booking.update(params)
+    @booking.save
+  end
+
+  private
+
+  def booking_params
+    params.require(:booking).permit(:status, :start_date, :end_date)
+  end
+
+  def set_booking
+    @booking = Booking.find(params[:id])
+  end
 end
