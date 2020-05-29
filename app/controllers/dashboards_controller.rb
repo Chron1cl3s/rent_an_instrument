@@ -9,4 +9,7 @@ class DashboardsController < ApplicationController
     end
   end
 
+  def skip_pundit?
+    true
+  end
 end
