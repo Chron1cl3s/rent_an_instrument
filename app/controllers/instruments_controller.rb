@@ -1,8 +1,16 @@
 class InstrumentsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
   def index
-    # @instruments = Instrument.all
+
     @instruments = policy_scope(Instrument)
+    @users = User.geocoded # returns user with coordinates
+
+    @markers = @users.map do |user|
+      {
+        lat: user.latitude,
+        lng: user.longitude
+      }
+    end
     @notice = params[:notice]
 
   end
