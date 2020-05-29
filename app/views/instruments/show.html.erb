@@ -7,13 +7,13 @@
       <h2>Some details:</h2>
       <p> <%= @instrument.description%> </p>
       <h2>for only <strong> <%= @instrument.price_per_day %> €</strong>/day!</h2>
-    </div> 
+    </div>
 
     <div id="map"
      style="width: 100%; height: 600px;"
-     data-markers="<%= @markers.to_json %>"
-     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
-</div>
+     data-markers="<%= @marker.to_json %>"
+     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+
   </div>
 <div class="calender">
   <%= simple_form_for ([@instrument, @booking]) do |f| %>
