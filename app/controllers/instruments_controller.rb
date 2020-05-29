@@ -17,6 +17,11 @@ class InstrumentsController < ApplicationController
 
   def show
     @instrument = Instrument.find(params[:id])
+    @marker = [
+      {lat: @instrument.user.latitude,
+      lng: @instrument.user.longitude
+    }]
+
     @booking = Booking.new
     authorize @instrument
   end
