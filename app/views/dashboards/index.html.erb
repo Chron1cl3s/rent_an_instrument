@@ -1,5 +1,10 @@
 <%= render "shared/navbar" %>
 
+<h2>My instruments</h2>
+  <% @instruments.each do |instrument| %>
+    <p> <%= instrument.name %> </p>
+  <% end %>
+
 <h2>My bookings</h2>
 
 <% @bookings.each do |booking| %>
