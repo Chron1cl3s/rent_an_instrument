@@ -14,6 +14,7 @@ class BookingsController < ApplicationController
       @booking.status = "pending"
       @booking.total_price = (@booking.end_date - @booking.start_date).to_i * @booking.instrument.price_per_day
       if @booking.save
+         flash[:notice] = "Booking Confirmed"
         redirect_to user_dashboards_path(current_user)
       else
         redirect_to instruments_path
@@ -49,5 +50,4 @@ class BookingsController < ApplicationController
   def set_booking
     @booking = Booking.find(params[:id])
   end
-
 end
