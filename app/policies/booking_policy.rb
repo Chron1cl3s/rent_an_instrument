@@ -8,4 +8,8 @@ class BookingPolicy < ApplicationPolicy
   def create?
     record.instrument.user != user
   end
+
+  def update?
+    record.instrument.user == user
+  end
 end

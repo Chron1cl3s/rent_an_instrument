@@ -23,6 +23,10 @@
     <li> Start date: <%= pending_incoming_booking.start_date %></li>
     <li> End date: <%= pending_incoming_booking.end_date %></li>
     <li> Total price: <%= pending_incoming_booking.total_price %></li>
+    <%= simple_form_for(pending_incoming_booking) do |f| %>
+      <%= f.input :status, collection: ["decline","accept"] %>
+      <%= f.submit "Confirm" %>
+    <% end %>
   </ul>
 <% end %>
 
