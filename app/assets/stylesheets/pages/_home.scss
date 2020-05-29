@@ -2,6 +2,7 @@
 
 h1 {
   font-size: 48px;
+  color: $bisque;
 }
 
 .ctrl-btn {
@@ -9,6 +10,9 @@ h1 {
 }
 
 .ctrl-btn:hover {
-  background-color: #e2d3c4;
+  background-color: rgb(146, 39, 78);;
 }
 
+.wrapper {
+  align-items: center;
+}
